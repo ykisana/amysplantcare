@@ -54,13 +54,13 @@ export default function jadePlantPage() {
         if (incomingFrequency) {
           jadesetWaterFrequency(incomingFrequency);
         }
-      } */
+      } 
     });
 
     // Cleanup on unmount
     return () => {
       client.end();
-    };
+    }; */
   }, []);
 
   // Publish new schedule

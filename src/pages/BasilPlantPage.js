@@ -54,13 +54,13 @@ export default function basilPlantPage() {
         if (incomingFrequency) {
           basilsetWaterFrequency(incomingFrequency);
         }
-      } */
+      } 
     });
 
     // Cleanup on unmount
     return () => {
       client.end();
-    };
+    }; */
   }, []);
 
   // Publish new schedule
