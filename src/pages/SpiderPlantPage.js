@@ -20,12 +20,12 @@ export default function SpiderPlantPage() {
   const [showSaved, setShowSaved] = spideruseState(false);
 
   // MQTT details
-  const brokerUrl = 'wss://test.mosquitto.org:8081/mqtt';
+  const brokerUrl = "ws://test.mosquitto.org:8080/mqtt";
   const spiderwaterTopic = "plant/spider/water";
 
   // Connect to MQTT broker on mount
   spideruseEffect(() => {
-    const client = mqtt.connect(brokerUrl);
+   /* const client = mqtt.connect(brokerUrl);
 
     client.on("connect", () => {
       console.log("Successfully connected to broker");
@@ -60,7 +60,7 @@ export default function SpiderPlantPage() {
     // Cleanup on unmount
     return () => {
       client.end();
-    };
+    }; */
   }, []);
 
   // Publish new schedule

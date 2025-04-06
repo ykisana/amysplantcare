@@ -20,12 +20,12 @@ export default function jadePlantPage() {
   const [showSaved, setShowSaved] = jadeuseState(false);
 
   // MQTT details
-  const brokerUrl = 'wss://test.mosquitto.org:8081/mqtt';
+  const brokerUrl = "ws://test.mosquitto.org:8080/mqtt";
   const jadewaterTopic = "plant/jade/water";
 
   // Connect to MQTT broker on mount
   jadeuseEffect(() => {
-    const client = mqtt.connect(brokerUrl);
+   /* const client = mqtt.connect(brokerUrl);
 
     client.on("connect", () => {
       console.log("Successfully connected to broker");
@@ -54,7 +54,7 @@ export default function jadePlantPage() {
         if (incomingFrequency) {
           jadesetWaterFrequency(incomingFrequency);
         }
-      }
+      } */
     });
 
     // Cleanup on unmount

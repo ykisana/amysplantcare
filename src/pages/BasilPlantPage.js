@@ -20,12 +20,12 @@ export default function basilPlantPage() {
   const [showSaved, setShowSaved] = basiluseState(false);
 
   // MQTT details
-  const brokerUrl = 'wss://test.mosquitto.org:8081/mqtt';
+  const brokerUrl = "ws://test.mosquitto.org:8080/mqtt";
   const basilwaterTopic = "plant/basil/water";
 
   // Connect to MQTT broker on mount
   basiluseEffect(() => {
-    const client = mqtt.connect(brokerUrl);
+   /* const client = mqtt.connect(brokerUrl);
 
     client.on("connect", () => {
       console.log("Successfully connected to broker");
@@ -54,7 +54,7 @@ export default function basilPlantPage() {
         if (incomingFrequency) {
           basilsetWaterFrequency(incomingFrequency);
         }
-      }
+      } */
     });
 
     // Cleanup on unmount
