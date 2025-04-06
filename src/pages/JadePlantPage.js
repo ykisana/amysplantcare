@@ -25,7 +25,7 @@ export default function jadePlantPage() {
 
   // Connect to MQTT broker on mount
   jadeuseEffect(() => {
-   /* const client = mqtt.connect(brokerUrl);
+    const client = mqtt.connect(brokerUrl);
 
     client.on("connect", () => {
       console.log("Successfully connected to broker");
@@ -54,13 +54,13 @@ export default function jadePlantPage() {
         if (incomingFrequency) {
           jadesetWaterFrequency(incomingFrequency);
         }
-      } 
+      }
     });
 
     // Cleanup on unmount
     return () => {
       client.end();
-    }; */
+    };
   }, []);
 
   // Publish new schedule

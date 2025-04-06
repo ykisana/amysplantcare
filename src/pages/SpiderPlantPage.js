@@ -25,7 +25,7 @@ export default function SpiderPlantPage() {
 
   // Connect to MQTT broker on mount
   spideruseEffect(() => {
-   /* const client = mqtt.connect(brokerUrl);
+    const client = mqtt.connect(brokerUrl);
 
     client.on("connect", () => {
       console.log("Successfully connected to broker");
@@ -60,7 +60,7 @@ export default function SpiderPlantPage() {
     // Cleanup on unmount
     return () => {
       client.end();
-    }; */
+    };
   }, []);
 
   // Publish new schedule

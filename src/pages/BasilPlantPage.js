@@ -25,7 +25,7 @@ export default function basilPlantPage() {
 
   // Connect to MQTT broker on mount
   basiluseEffect(() => {
-   /* const client = mqtt.connect(brokerUrl);
+    const client = mqtt.connect(brokerUrl);
 
     client.on("connect", () => {
       console.log("Successfully connected to broker");
@@ -54,13 +54,13 @@ export default function basilPlantPage() {
         if (incomingFrequency) {
           basilsetWaterFrequency(incomingFrequency);
         }
-      } 
+      }
     });
 
     // Cleanup on unmount
     return () => {
       client.end();
-    }; */
+    };
   }, []);
 
   // Publish new schedule
