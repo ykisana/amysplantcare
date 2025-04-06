@@ -20,7 +20,7 @@ export default function basilPlantPage() {
   const [showSaved, setShowSaved] = basiluseState(false);
 
   // MQTT details
-  const brokerUrl = "ws://test.mosquitto.org:8080/mqtt";
+  const brokerUrl = 'wss://test.mosquitto.org:8081/mqtt';
   const basilwaterTopic = "plant/basil/water";
 
   // Connect to MQTT broker on mount

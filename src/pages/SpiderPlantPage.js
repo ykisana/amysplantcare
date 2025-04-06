@@ -20,7 +20,7 @@ export default function SpiderPlantPage() {
   const [showSaved, setShowSaved] = spideruseState(false);
 
   // MQTT details
-  const brokerUrl = "ws://test.mosquitto.org:8080/mqtt";
+  const brokerUrl = 'wss://test.mosquitto.org:8081/mqtt';
   const spiderwaterTopic = "plant/spider/water";
 
   // Connect to MQTT broker on mount

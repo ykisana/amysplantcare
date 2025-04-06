@@ -20,7 +20,7 @@ export default function jadePlantPage() {
   const [showSaved, setShowSaved] = jadeuseState(false);
 
   // MQTT details
-  const brokerUrl = "ws://test.mosquitto.org:8080/mqtt";
+  const brokerUrl = 'wss://test.mosquitto.org:8081/mqtt';
   const jadewaterTopic = "plant/jade/water";
 
   // Connect to MQTT broker on mount
