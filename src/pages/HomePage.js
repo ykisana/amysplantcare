@@ -48,22 +48,116 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div 
+    <div
+      className="App-header"
       style={{
-        // Removed backgroundImage: replacing with a solid background color
-        backgroundColor: '#ffffff', 
-        minHeight: '100vh',
+        backgroundImage: `url(${plantBackground})`,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
         color: '#3b522f',
+        minHeight: '100vh',
         padding: '2rem'
       }}
     >
       <h1 style={{ textAlign: 'center', fontSize: '3rem' }}>My Plant Care</h1>
-      <p>Temperature: {temperature !== null ? `${temperature}°C` : 'Loading...'}</p>
-      <p>Water Level: {waterLevel !== null ? `${waterLevel}%` : 'Loading...'}</p>
+
+      {/* Row of plant tiles */} 
+      <div
+        className="plant-list"
+        style={{ marginTop: '2rem', display: 'flex', gap: '2rem' }}
+      >
+        <PlantTile image={basilPlant} alt="Basil Plant" link="/basil" />
+        <PlantTile image={spiderPlant} alt="Spider Plant" link="/spider" />
+        <PlantTile image={jadePlant} alt="Jade Plant" link="/jade" />
+      </div>
+
+      {/* Status tiles row */}
+      <div
+        className="status-container"
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          gap: '2rem',
+          marginTop: '2rem',
+        }}
+      >
+        {/* Temperature tile */}
+        <div
+          className="status-tile"
+          style={{
+            border: '4px solid #3b522f',
+            borderRadius: '8px',
+            // Reduced top padding to move header higher
+            padding: '0.5rem 2rem 1rem', 
+            backgroundColor: '#ffffffcc',
+            textAlign: 'center',
+            minWidth: '220px'
+          }}
+        >
+          <h2 
+            style={{ 
+              // Remove any default top margin
+              marginTop: 0,
+              marginBottom: '0.5rem', 
+              color: '#3b522f',
+              fontSize: '2rem'
+            }}
+          >
+            Temperature Status
+          </h2>
+          <p
+            style={{
+              color: '#3b522f',
+              fontSize: '3rem',   // Larger than the header
+              fontWeight: 'bold',
+              margin: 0
+            }}
+          >
+            {temperature !== null ? `${temperature}°C` : 'Loading...'}
+          </p>
+        </div>
+
+        {/* Water level tile */}
+        <div
+          className="status-tile"
+          style={{
+            border: '4px solid #3b522f',
+            borderRadius: '8px',
+            // Same reduced top padding and margin approach
+            padding: '0.5rem 2rem 1rem',
+            backgroundColor: '#ffffffcc',
+            textAlign: 'center',
+            minWidth: '220px'
+          }}
+        >
+          <h2 
+            style={{ 
+              marginTop: 0,
+              marginBottom: '0.5rem', 
+              color: '#3b522f',
+              fontSize: '2rem'
+            }}
+          >
+            Water Level Status
+          </h2>
+          <p
+            style={{
+              color: '#3b522f',
+              fontSize: '3rem',
+              fontWeight: 'bold',
+              margin: 0
+            }}
+          >
+            {waterLevel !== null ? `${waterLevel}%` : 'Loading...'}
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
+
