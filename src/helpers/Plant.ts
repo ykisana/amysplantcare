@@ -9,11 +9,11 @@ export const Plants: Array<Plant> = [
     image: "/basil-plant.jpg",
   },
   {
-    name: "Spider Plant",
+    name: "Spider",
     image: "/spider-plant.jpg",
   },
   {
-    name: "Jade Plant",
+    name: "Jade",
     image: "/jade-plant.jpg",
   },
 ];

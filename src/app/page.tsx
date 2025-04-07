@@ -2,6 +2,7 @@ import AppContainer from "@/components/AppContainer";
 import { Header } from "@/components/Header";
 import PlantsRow from "@/components/PlantsRow";
 import StatusContainer from "@/components/StatusContainer";
+// test
 
 export default function Home() {
   return (
