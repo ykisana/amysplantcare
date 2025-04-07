@@ -6,7 +6,7 @@ import StatusTile from "./StatusTile";
 
 export default function StatusContainer() {
   console.log("test");
-  const brokerUrl = "ws://test.mosquitto.org:8080/mqtt";
+  const brokerUrl = "wss://mqtt-proxy-production.up.railway.app";
 
   console.log("test2");
   const TEMP_TOPIC = "plant/temp";
