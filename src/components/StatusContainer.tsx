@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import StatusTile from "./StatusTile";
 
 export default function StatusContainer() {
-  const brokerUrl = "ws://test.mosquitto.org:8080/mqtt";
+  const brokerUrl = "wss://test.mosquitto.org:8080/mqtt";
 
   const TEMP_TOPIC = "plant/temp";
   const WATERLEVEL_TOPIC = "plant/waterlevel";
