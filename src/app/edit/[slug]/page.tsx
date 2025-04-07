@@ -15,7 +15,6 @@ export default function EditPage() {
   const [plantmode, plantsetMode] = useState("manual");
   const [plantwaterFrequency, plantsetWaterFrequency] = useState("1");
   const [plantwaterAmount, plantsetWaterAmount] = useState("50");
-  const [plantisConnected, plantsetIsConnected] = useState(false);
   const [showSaved, setShowSaved] = useState(false);
 
   const brokerUrl = "wss://test.mosquitto.org:8081/mqtt";
@@ -26,7 +25,6 @@ export default function EditPage() {
 
     client.on("connect", () => {
       console.log("Successfully connected to broker");
-      plantsetIsConnected(true);
 
       // Subscribe to the plant water topic
       // If the message is retained, we get it immediately
