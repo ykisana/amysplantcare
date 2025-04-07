@@ -24,7 +24,7 @@ export function EditForm({
       <div className="flex flex-col">
         <label>Schedule type:</label>
         <select
-          className="bg-white text-[#3b522f] border border-[#3b522f] px-3 py-2 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#3b522f]"
+          className="w-75 bg-white text-[#3b522f] border border-[#3b522f] px-3 py-2 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#3b522f]"
           value={mode}
           onChange={(e) => setMode(e.target.value)}
         >
@@ -38,7 +38,7 @@ export function EditForm({
           <div className="flex flex-col">
             <label>Water Frequency:</label>
             <select
-              className="bg-white text-[#3b522f] border border-[#3b522f] px-3 py-2 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#3b522f]"
+              className="w-75 bg-white text-[#3b522f] border border-[#3b522f] px-3 py-2 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#3b522f]"
               value={waterFrequency}
               onChange={(e) => setWaterFrequency(e.target.value)}
             >
@@ -52,7 +52,7 @@ export function EditForm({
           <div className="flex flex-col">
             <label>Water Amount (ml):</label>
             <input
-              className="bg-white text-[#3b522f] border border-[#3b522f] px-3 py-2 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#3b522f]"
+              className="w-full bg-white text-[#3b522f] border border-[#3b522f] px-3 py-2 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#3b522f]"
               type="text"
               value={waterAmount}
               onChange={(e) => setWaterAmount(e.target.value)}

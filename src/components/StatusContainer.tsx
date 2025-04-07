@@ -45,7 +45,7 @@ export default function StatusContainer() {
       />
       <StatusTile
         name="Water Level"
-        value={waterLevel ? `${temperature}°C` : "Loading..."}
+        value={waterLevel ? `${waterLevel}%`: "Loading..."}
       />
     </div>
   );

@@ -14,7 +14,7 @@ export default function PlantTile({ image, name }: PlantTileProps) {
         alt={name}
         width={300}
         height={300}
-        className="border-[4px] border-[#3b522f] rounded-[15px]"
+        className="border-[5px] border-[#3b522f] rounded-[15px]"
       />
     </Link>
   );

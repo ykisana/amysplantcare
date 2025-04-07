@@ -3,5 +3,5 @@ export interface HeaderProps {
 }
 
 export function Header({ text }: HeaderProps) {
-  return <h1 className="text-center text-[3rem]">{text}</h1>;
+  return <h1 className="text-center text-[3rem] font-bold">{text}</h1>;
 }
