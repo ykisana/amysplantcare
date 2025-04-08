@@ -34,7 +34,7 @@ export default function EditPage() {
     // When messages arrive, parse them to update the schedule
     client.on("message", (topic, payload) => {
       if (topic === plantwaterTopic) {
-        const msgString = payload.toString(); // e.g., "manual,50,7"
+        const msgString = payload.toString(); 
         console.log("Received schedule:", msgString);
 
         // Parse the CSV: "mode,amount,frequency"
