@@ -10,14 +10,14 @@ import { useEffect, useState } from "react";
 
 export default function EditPage() {
   const params = useParams();
-  const slug = params.slug as string;
+  const slug = params?.slug as string || "";
 
   const [plantmode, plantsetMode] = useState("manual");
   const [plantwaterFrequency, plantsetWaterFrequency] = useState("1");
   const [plantwaterAmount, plantsetWaterAmount] = useState("50");
   const [showSaved, setShowSaved] = useState(false);
 
-  const brokerUrl = "wss://test.mosquitto.org:8883/mqtt";
+    const brokerUrl = "wss://test.mosquitto.org:8081/mqtt";
   const plantwaterTopic = `plant/${slug.toLowerCase()}/water`;
 
   useEffect(() => {

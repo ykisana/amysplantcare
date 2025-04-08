@@ -7,7 +7,7 @@ import spiderPlant from '../spider-plant.jpg';
 import basilPlant from '../basil-plant.jpg';
 import plantBackground from '../plant-background.png'; 
 
-const brokerUrl = 'wss://test.mosquitto.org:8883/mqtt';
+const brokerUrl = "wss://test.mosquitto.org:8081/mqtt";
 
 const TEMP_TOPIC       = 'plant/temp';
 const WATERLEVEL_TOPIC = 'plant/waterlevel';
