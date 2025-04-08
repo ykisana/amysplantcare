@@ -17,7 +17,7 @@ export default function EditPage() {
   const [plantwaterAmount, plantsetWaterAmount] = useState("50");
   const [showSaved, setShowSaved] = useState(false);
 
-  const brokerUrl = "ws://test.mosquitto.org:8080/mqtt";
+  const brokerUrl = "wss://test.mosquitto.org:8883/mqtt";
   const plantwaterTopic = `plant/${slug.toLowerCase()}/water`;
 
   useEffect(() => {
